@@ -15,6 +15,10 @@ kubeConfig.loadFromDefault();
 //kubeConfig.setCurrentContext("); // you can set the context after loading from default
 
 // console.log({ defaultConfig: kubeConfig });
+const contexts = kubeConfig.getContexts();
+console.log("Contexts Found :");
+console.log(JSON.stringify(contexts, null, 2));
+console.log("======================================");
 console.log(
   "The current context we are looking at :",
   kubeConfig.getCurrentContext()
